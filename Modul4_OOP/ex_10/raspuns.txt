@@ -1,0 +1,1 @@
+Cu interfetele doar poti sa declari metodele.
