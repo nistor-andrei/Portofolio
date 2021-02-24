@@ -9,4 +9,3 @@ SessionCart::sessionStart();
 $contact=new Contact;
 $contact->contact();
 
-echo 'adsd';
