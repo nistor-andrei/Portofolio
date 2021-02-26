@@ -3,7 +3,7 @@ $(".add-to-cart").on('click', function () {
     var postData = 'id_product=' + attribute;
     $.ajax({
         type: "POST",
-        url: "assets/ajax-add.php",
+        url: "Controller/ajax-add.php",
         dataType: "json",
         data: postData
     }).done(function (data) {
@@ -16,7 +16,7 @@ $(".remove-to-cart").on('click', function () {
     var dataPost = 'id_product=' + attribute;
     $.ajax({
         type: "POST",
-        url: "assets/ajax-remove.php",
+        url: "Controller/ajax-remove.php",
         dataType: "json",
         data: dataPost
     }).done(function (data) {
@@ -29,7 +29,7 @@ $(".remove-all").on('click', function () {
     var dataPost = 'id_product=' + attribute;
     $.ajax({
         type: "POST",
-        url: "assets/ajax-remove-all.php",
+        url: "Controller/ajax-remove-all.php",
         dataType: "json",
         data: dataPost
     }).done(function (data) {
