@@ -1,0 +1,39 @@
+$(".add-to-cart").on('click', function () {
+    var attribute = $(this).attr("data-product-id");
+    var postData = 'id_product=' + attribute;
+    $.ajax({
+        type: "POST",
+        url: "assets/ajax-add.php",
+        dataType: "json",
+        data: postData
+    }).done(function (data) {
+        $("#number-products").html(data.items);
+    })
+});
+
+$(".remove-to-cart").on('click', function () {
+    var attribute = $(this).attr("data-product-id");
+    var dataPost = 'id_product=' + attribute;
+    $.ajax({
+        type: "POST",
+        url: "assets/ajax-remove.php",
+        dataType: "json",
+        data: dataPost
+    }).done(function (data) {
+        $("#number-products").html(data.items);
+    })
+    window.location.reload();
+});
+$(".remove-all").on('click', function () {
+    var attribute = $(this).attr("data-product-id");
+    var dataPost = 'id_product=' + attribute;
+    $.ajax({
+        type: "POST",
+        url: "assets/ajax-remove-all.php",
+        dataType: "json",
+        data: dataPost
+    }).done(function (data) {
+        $("#number-products").html(data.items);
+    })
+    window.location.reload();
+});
