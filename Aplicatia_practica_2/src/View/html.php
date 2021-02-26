@@ -32,7 +32,11 @@ class Html
             <div class="position-absolute top-50 end-0 translate-middle-y">
             <a href="cart.php">
             <button type="button" class="btn btn-dark"  class="cart">
-           Cosul meu <span class="badge bg-secondary" id="number-products"></span>
+           Cosul meu <span class="badge bg-secondary" id="number-products">';
+        if (!empty($_SESSION['products'])) {
+            count($_SESSION['products']);
+        }
+        echo '</span>
           </button>
           </a>
           </div>
@@ -43,7 +47,7 @@ class Html
     }
     public static function endHTML()
     {
-    echo ' <footer class="bg-light text-center text-lg-start" class="footer navbar-fixed-bottom">
+        echo ' <footer class="bg-light text-center text-lg-start" class="footer navbar-fixed-bottom">
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(33,37,41,255); color: rgb(211,219,216); ">
       © 2020 Copyright:
@@ -51,7 +55,7 @@ class Html
     </div>
     <!-- Copyright -->
   </footer>';
-    echo '<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+        echo '<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
         <script src="assets/ajax.js"></script>
       </body>
