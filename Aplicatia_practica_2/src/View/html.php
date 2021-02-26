@@ -35,6 +35,8 @@ class Html
            Cosul meu <span class="badge bg-secondary" id="number-products">';
         if (!empty($_SESSION['products'])) {
             count($_SESSION['products']);
+        }else{
+          echo '0';
         }
         echo '</span>
           </button>
