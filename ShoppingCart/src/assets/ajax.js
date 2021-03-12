@@ -1,16 +1,4 @@
-/*
-fisier php()->apelat de ajax.js
-De la client la server id prodului pe  care vreau sa-l adaug in cos
-La server  voi face o interogare pentru a lua pretul produsului(metoda in model)
-Primesc informatia din tabela si in sesiune voi stoca o cheie care v-a reprezentat totalu produselor:
-_SESSION[2] cu pretul total 500 
-_SESSIOn[3] cu pretul total SESSION[2]+pretul produsului curent
 
-Trebuia actualizat in sesiune:
-numar total de produse adaugate in cos
-pretul total al produselor
-
-*/
 const cardBody = {
     add: document.getElementsByClassName('add-to-cart'),
 };
